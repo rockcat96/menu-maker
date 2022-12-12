@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+
+    <body>
+        <%- include("./partials/header.ejs") %>
+        <main>
+            <div>
+                <article>
+                    
+                        <h2>
+                            <%= menu.name %>
+                        </h2>
+                        
+                        <img src=<%= menu.image %> alt=<%= menu.name %>> 
+
+                        <h3>$<%= menu.price %></h3>
+                        <h3><%= menu.description %></h3>
+                        <h3><%= menu.allergens %></h3>
+
+                        <a href="/menu/<%= menu._id %>/edit">
+                            <button>Edit</button>
+                        </a>
+                        <form action="/menu/<%= menu._id %>?_method=DELETE" method="POST">
+                            <input type="submit" value="Delete"/>
+                        </form>
+                        <a href="/menu/"><button>Back to Main</button></a>
+                </article>
+                            </div>
+        </main>
+    </body>
+</html>

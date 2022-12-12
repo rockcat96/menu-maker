@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+
+    <body>
+        <%- include("./partials/header.ejs") %>
+        <main>
+            <div>
+               <form action="/menu" method="post">
+                <fieldset>
+                    <legend>Create a New Menu Item</legend>
+                    <label>
+                        NAME: <input 
+                            type="text"
+                            name="name"     
+                            placeholder="enter a menu item name"
+                        />
+                    </label>
+                    <label>
+                        IMAGE:<input
+                            type="text"
+                            name="image"
+                            placeholder="enter menu image address"
+                        />
+                    </label>
+                    <label>
+                        PRICE:<input
+                            type="text"
+                            name="price"
+                            placeholder="enter menu item price"
+                        />
+                    </label>
+                    <label>
+                        DESCRIPTION:<input
+                            type="text"
+                            name="description"
+                            placeholder="enter menu item description"
+                        />
+                    </label>
+                    <label>
+                        ALLERGENS:<input
+                            type="text"
+                            name="allergens"
+                            placeholder="enter menu item allergens"
+                        />
+                    </label>
+                </fieldset>
+                <input type="submit" value="create new menu item" />
+               </form>
+            </div>
+        </main>
+    </body>
+</html>

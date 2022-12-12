@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+
+    <body>
+        <%- include("./partials/header.ejs") %>
+        <main>
+            <div>
+                <a href="/menu/new"><button>Create New Menu Item</button></a>
+                <% for (menu of menus){%>
+                <article>
+                    <a href="/menu/<%= menu._id %>">
+                        <h2>
+                            <%= menu.name %>
+                            $<%= menu.price %>
+                        </h2>
+                            <img src=<%= menu.image %> alt=<%= menu.name %>> 
+                    </a>
+                </article>
+                
+                <% } %>
+            </div>
+        </main>
+    </body>
+</html>

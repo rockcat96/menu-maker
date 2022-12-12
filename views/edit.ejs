@@ -1,7 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("./partials/head.ejs") %>
+    <%- include("./partials/head.ejs") %>
 <body>
-    
+    <%- include("./partials/header.ejs") %>
+<main>
+    <div>
+        <form action="/menu/<%= menu._id %>?_method=PUT" method="post">
+            <fieldset>
+                <legend>Edit a <%= menu.name %></legend>
+                <label>
+                    NAME: <input 
+                        type="text"
+                        name="name"
+                        value="<%= menu.name %>"
+                        placeholder="enter a menu item name"
+                    />
+                </label>
+                <label>
+                    IMAGE:<input
+                        type="text"
+                        name="image"
+                        value="<%= menu.image%>"
+                        placeholder="enter menu image address"
+                    />
+                </label>
+                <label>
+                    PRICE:<input
+                        type="text"
+                        name="price"
+                        value="<%= menu.price%>"
+                        placeholder="enter menu item price"
+                    />
+                </label>
+                <label>
+                    DESCRIPTION:<input
+                        type="text"
+                        name="description"
+                        value="<%= menu.description%>"
+                        placeholder="enter menu item description"
+                    />
+                </label>
+                <label>
+                    ALLERGENS:<input
+                        type="text"
+                        name="allergens"
+                        value="<%= menu.allergens%>"
+                        placeholder="enter menu item allergens"
+                    />
+                </label>
+            </fieldset>
+            <input 
+            type="submit" 
+            value="Update <%= menu.name %>" 
+            />
+        </form>
+    </div>
+</main>
 </body>
 </html>
