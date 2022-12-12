@@ -4,11 +4,11 @@
 
     <body>
         <%- include("./partials/header.ejs") %>
+        
         <main>
-            <div>
-                <a href="/menu/new"><button>Create New Menu Item</button></a>
+                       
                 <% for (menu of menus){%>
-                <article>
+                <div class="item"> 
                     <a href="/menu/<%= menu._id %>">
                         <h2>
                             <%= menu.name %>
@@ -16,10 +16,10 @@
                         </h2>
                             <img src=<%= menu.image %> alt=<%= menu.name %>> 
                     </a>
-                </article>
+                </div>
                 
                 <% } %>
-            </div>
+
         </main>
     </body>
 </html>

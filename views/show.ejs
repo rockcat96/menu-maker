@@ -12,7 +12,7 @@
                             <%= menu.name %>
                         </h2>
                         
-                        <img src=<%= menu.image %> alt=<%= menu.name %>> 
+                        <div class="img"><img src=<%= menu.image %> alt=<%= menu.name %>></div>
 
                         <h3>$<%= menu.price %></h3>
                         <h3><%= menu.description %></h3>
@@ -24,9 +24,8 @@
                         <form action="/menu/<%= menu._id %>?_method=DELETE" method="POST">
                             <input type="submit" value="Delete"/>
                         </form>
-                        <a href="/menu/"><button>Back to Main</button></a>
                 </article>
-                            </div>
+            </div>
         </main>
     </body>
 </html>
