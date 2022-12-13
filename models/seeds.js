@@ -14,7 +14,7 @@ mongoose.connection.on("open", () => {
 
 //seed code
 
-    // array of starter fruits
+    // array of starter menu items
     const startMenu = [
           { name: "Beef Wellington", image:"https://www.foodandwine.com/thmb/2k2Kq24_fMvHCyLMPRSNrpg5QdE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/beef-wellington-FT-RECIPE0321-c9a63fccde3b45889ad78fdad078153f.jpg", price: 34, description:"Fillet steak with mushroom pate, wrapped in puff pastry. Served with a generous heap of idaho potato and rainbow carrots.", allergens: "dairy, egg"  },
           { name: "Mushroom Risotto", image:"https://www.thespruceeats.com/thmb/LM1TreKn5rR3tcM6xsEvyWX5zq4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/mushroom-risotto-recipe-996005-hero-01-5c3ab578c9e77c0001d3d78f.jpg", price: 26, description:"Seriously creamy and delicious truffle mushroom risotto features dried porcini mushrooms and is finished with truffle oil.", allergens: "dairy, egg"  },
@@ -25,11 +25,11 @@ mongoose.connection.on("open", () => {
         ]
 
     
-    // Delete all fruits
+    // Delete all menu items
     Menu.deleteMany({}, (err, data) => {
-        // Seed Starter Fruits
+        // Seed starter menu items
         Menu.create(startMenu,(err, data) => {
-            // send created fruits as response to confirm creation
+            // send created menu items as response to confirm creation
             console.log(data);
           }
         );
