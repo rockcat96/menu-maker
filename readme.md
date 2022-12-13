@@ -22,7 +22,11 @@ An online application used for restaurants and home chefs to create their digita
  ![wireframes](https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/company/C60a2e558ae5b4357ad8194db13a46271/projects/MWC8FUSn5ob/pages/3ae940481a634579aeb6c3d79790b87a/image/3ae940481a634579aeb6c3d79790b87a.png?1670384822323)
 
  ### App Images
- ![app screenshots 1](https://imgur.com/ndwzPiR)
+ ![app screenshots 1](https://i.imgur.com/ndwzPiR.png)
+ ![app screenshots 2](https://i.imgur.com/rJRVrtr.png)
+ ![app screenshots 3](https://i.imgur.com/s2YfoZa.png)
+ ![app screenshots 4](https://i.imgur.com/OYWUwFx.png)
+ ![app screenshots 5](https://i.imgur.com/0pF80aw.png)
 
 
 
@@ -55,4 +59,7 @@ An online application used for restaurants and home chefs to create their digita
 
 ### Getting Started
 
-Coming soon...(In this section include the link to your deployed app and any instructions you deem important)
+- Click on "create new menu items" button to add new menu items to your menu!
+- To learn more about an item, tap on the image of the item.
+- To delete an item, click on the item and then tap the delete button.
+- To edit an item, click on the item and then tap the edit button. This will navigate you to the edit page. Then edit the item and click the update button to make changes to the menu item.
