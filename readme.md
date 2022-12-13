@@ -55,7 +55,7 @@ An online application used for restaurants and home chefs to create their digita
 
 ### Link to Project
 
-[My Project Live Page](https://menu-creation-tool.onrender.com)
+[My Project Live Page](https://menu-make-2.onrender.com/menu/)
 
 ### Getting Started
 
