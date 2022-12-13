@@ -17,20 +17,10 @@ const router = express.Router() //router will HAVE ALL ROUTES ATTACHED TO IT
 //command d allows us to select all "app" at the same time to update them to "router"
 
 
-// router.get("/", (req, res) => {
-//     res.redirect("/fruits")
-// })
-
-
 router.get("/test", (req, res) => {
     res.send("The server is running!")
 })
 
-router.get("/seed", (req, res) => {
-    
-    
-
-})
 
 // index route
 router.get("/", async (req, res) => {
@@ -57,7 +47,7 @@ router.get("/:id/edit", (req,res) => {
     const id = req.params.id
 
     Menu.findById(id, (err, menu) => {
-        // res.json(fruit)
+        // res.json(menu)
         //we don't need ./because ejs already knows to look inside of the views folder 
         res.render("edit.ejs", {menu})
     })
@@ -74,10 +64,10 @@ router.put("/:id", (req,res) => {
     //check if the readyToEat property should be true or false
     // req.body.readyToEat = req.body.readyToEat === "on" ? true:false
     
-    //update the fruit
+    //update the menu item
     Menu.findByIdAndUpdate(id, req.body,{new: true}, (err, menu) => {
-        //new: true just updates the value of the fruit used in the callback function
-        //redirects user back to the main page when the fruit has been updated
+        //new: true just updates the value of the menu item used in the callback function
+        //redirects user back to the main page when the menu item has been updated
         res.redirect(`/menu/${id}`)
     })
 
@@ -86,7 +76,7 @@ router.put("/:id", (req,res) => {
 
 // show route
 router.get("/:id", (req, res) => {
-    //go and get fruit from the database
+    //go and get menu item from the database
     Menu.findById(req.params.id)
     .then((menu) => {
         res.render('show.ejs', {menu})
